@@ -3,11 +3,11 @@ use std::io;
 fn main() {
     //Convert temperatures between Fahrenheit and Celsius.
 
-    let mut input = String::new();
-    let mut mode = String::new();
-
     loop {
         println!("Temperature converter!");
+
+        let mut input = String::new();
+        let mut mode = String::new();
 
         println!("Enter a mode they are: f2c and c2f");
         io::stdin()
@@ -28,7 +28,6 @@ fn main() {
 
         let converted = covert_temp(input, &mode);
         println!("{} degrees {}", converted, mode);
-        break;
     }
 }
 
